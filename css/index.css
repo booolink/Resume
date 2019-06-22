@@ -379,6 +379,7 @@ p {
     border-radius: 3px;
     right: 0;
     top: 53px;
+    z-index: 999;
   }
   .menulist {
     height: calc(100% / 4);
