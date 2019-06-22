@@ -3,9 +3,8 @@
 $(document).ready(function(){
 
     $('.menu').click(function(){
-        $('.menubox').slideToggle();
+        $('.menubox').slideToggle(900);       
     })
-
     function back(){
         $('.container h1').fadeOut(1500,function(){
             $('.container h1').fadeIn(1500,function(){
@@ -14,6 +13,18 @@ $(document).ready(function(){
         })
     }
     back();
+    
+    $('.menu').click(function(){
+        $('.menu').toggleClass('menuani')
+
+    })
 
     
+    $(window).resize(function(){
+        var winHeight = $(document).height()
+        $('.container:after').height($(document).height())
+        console.log(winHeight)
+    })
+   
+   
 })
