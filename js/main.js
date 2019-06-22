@@ -18,6 +18,7 @@ $(document).ready(function(){
         $('.menu').toggleClass('menuani')
 
     })
+    
     var winHeight = $(document).height()
     
     $(window).resize(function(){
