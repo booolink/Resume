@@ -18,13 +18,10 @@ $(document).ready(function(){
         $('.menu').toggleClass('menuani')
 
     })
-
+    var winHeight = $(document).height()
     
     $(window).resize(function(){
-        var winHeight = $(document).height()
         $('.container:after').height($(document).height())
-        console.log(winHeight)
     })
-   
-   
+    console.log(winHeight)
 })
