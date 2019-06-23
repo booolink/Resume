@@ -1,24 +1,270 @@
 @charset "UTF-8";
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #999999;
-}
-
-li {
-  font-family: "微軟正黑體";
-}
-
-p {
-  font-family: "微軟正黑體";
-  font-size: 0.8em;
-  color: #4d4d4d;
+@media screen and (max-width: 1024px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/bgc.JPG");
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .container li {
+    list-style: none;
+  }
+  .container h1 {
+    font-size: 5em;
+    color: #999999;
+    text-align: center;
+    line-height: 450px;
+  }
+  .container .menubar {
+    width: 100%;
+    height: 60px;
+    padding: 10px 15px;
+    background-color: #f2f2f220;
+    -webkit-box-shadow: 1px 1px 2px #222;
+            box-shadow: 1px 1px 2px #222;
+  }
+  .container .menubar .menucanten {
+    width: 45px;
+    height: 100%;
+    position: relative;
+    float: right;
+  }
+  .container .menubar .menucanten .menu {
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+  .container .menubar .menucanten .menu:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #666;
+    top: 8px;
+    border-radius: 2px;
+  }
+  .container .menubar .menucanten .menu:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #666;
+    bottom: 8px;
+    border-radius: 2px;
+  }
+  .container .menubar .menucanten .menu.menuani {
+    -webkit-animation: menuani 1s;
+            animation: menuani 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .container .menubar .menubox {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    display: none;
+    background-color: #e6e6e640;
+    -webkit-box-shadow: 1px 1px 2px #222;
+            box-shadow: 1px 1px 2px #222;
+    border-radius: 3px;
+    right: 0;
+    top: 53px;
+    z-index: 999;
+  }
+  .container .menubar .menubox .menulist {
+    height: calc(100% / 4);
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 40px;
+  }
+  .bgccolor {
+    content: "";
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    background-color: #ff7bac;
+    top: 100%;
+    left: 0;
+    z-index: -999;
+    -webkit-clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+            clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+  }
+  .personal {
+    width: 95%;
+    margin: 72px auto 0px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top: 100px;
+  }
+  .personal .pic {
+    width: 210px;
+    height: 180px;
+    background-image: url("../img/pro-03.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .personal .information {
+    position: absolute;
+    left: 170px;
+    top: 18px;
+  }
+  .personal .information .infor_top span {
+    font-family: "微軟正黑體";
+    font-size: 1em;
+    color: #4d4d4d;
+  }
+  .personal .information .infor_top p {
+    font-family: "微軟正黑體";
+    font-size: 0.8em;
+    color: #4d4d4d;
+  }
+  .personal .information .infor_sub {
+    position: absolute;
+    margin-top: 24px;
+    left: -25px;
+  }
+  .personal .information .infor_sub span {
+    font-family: "微軟正黑體";
+    font-size: 1.2em;
+    color: #4d4d4d;
+  }
+  .personal .information .infor_sub p {
+    font-family: "微軟正黑體";
+    font-size: 0.8em;
+    color: #4d4d4d;
+  }
+  .experience {
+    width: 95%;
+    margin: 72px auto 0px auto;
+  }
+  .experience h3 {
+    font-family: "微軟正黑體";
+    font-size: 1.5em;
+    color: #4d4d4d;
+  }
+  .experience li {
+    position: relative;
+    list-style-image: url("../img/point.1-02.png");
+  }
+  .experience .exp_box {
+    position: relative;
+    clear: both;
+    width: 90%;
+    float: right;
+  }
+  .experience .exp_box:after {
+    content: "";
+    background-color: #333;
+    position: absolute;
+    width: 3px;
+    height: 250px;
+    top: 18px;
+    left: -13px;
+    z-index: -1;
+  }
+  .experience .exp_box .exp_infor {
+    margin-top: 24px;
+  }
+  .introduction {
+    position: relative;
+    clear: both;
+    width: 95%;
+    height: 535px;
+    margin: auto;
+  }
+  .introduction .intro_text {
+    position: absolute;
+    top: 72px;
+    font-family: "微軟正黑體";
+    font-size: 1.2em;
+  }
+  .skills {
+    width: 95%;
+    margin: 72px auto 0px auto;
+  }
+  .skills .skills_top {
+    width: 100%;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .skills .skills_but {
+    width: 100%;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .skills_box {
+    width: clac(100%/4);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .skills_1 {
+    width: 100%;
+    background-image: url("../img/ps-03.png");
+  }
+  .skills_2 {
+    width: 100%;
+    background-image: url("../img/ai-03.png");
+  }
+  .skills_3 {
+    width: 100%;
+    background-image: url("../img/scsslogo.png");
+  }
+  .skills_4 {
+    width: 100%;
+  }
+  .skills_5 {
+    width: 100%;
+    background-image: url("../img/jquery.png");
+  }
+  .skills_6 {
+    width: 100%;
+    background-image: url("../img/html-03.png");
+  }
+  .skills_7 {
+    width: 100%;
+    background-image: url("../img/css-03.png");
+  }
+  .skills_8 {
+    width: 100%;
+    background-image: url("../img/js-03.png");
+  }
+  @-webkit-keyframes menuani {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+    }
+  }
+  @keyframes menuani {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+    }
+  }
 }
 
 @media screen and (max-width: 415px) {
@@ -37,45 +283,33 @@ p {
   .container li {
     list-style: none;
   }
-  .container:after {
-    content: "";
-    width: 100%;
-    height: 200%;
-    position: absolute;
-    background-color: #ff7bac;
-    top: 100%;
-    left: 0;
-    z-index: -2;
-    -webkit-clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
-            clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
-  }
   .container h1 {
     font-size: 5em;
     color: #999999;
     text-align: center;
     line-height: 450px;
   }
-  .menubar {
+  .container .menubar {
     width: 100%;
     height: 60px;
-    padding: 10px;
+    padding: 10px 15px;
     background-color: #f2f2f220;
     -webkit-box-shadow: 1px 1px 2px #222;
             box-shadow: 1px 1px 2px #222;
   }
-  .menucanten {
-    width: 40px;
+  .container .menubar .menucanten {
+    width: 45px;
     height: 100%;
     position: relative;
     float: right;
   }
-  .menu {
+  .container .menubar .menucanten .menu {
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 999;
   }
-  .menu:after {
-    content: '';
+  .container .menubar .menucanten .menu:after {
+    content: "";
     position: absolute;
     width: 100%;
     height: 4px;
@@ -83,258 +317,8 @@ p {
     top: 8px;
     border-radius: 2px;
   }
-  .menu:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background-color: #666;
-    bottom: 8px;
-    border-radius: 2px;
-  }
-  .menu.menuani {
-    -webkit-animation: menuani 1s;
-            animation: menuani 1s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-  }
-  @-webkit-keyframes menuani {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-    }
-  }
-  @keyframes menuani {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-    }
-  }
-  .menubox {
-    width: 180px;
-    height: 180px;
-    position: absolute;
-    display: none;
-    background-color: #e6e6e640;
-    -webkit-box-shadow: 1px 1px 2px #222;
-            box-shadow: 1px 1px 2px #222;
-    border-radius: 3px;
-    right: 0;
-    top: 53px;
-  }
-  .menulist {
-    height: calc(100% / 4);
-    display: block;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 700;
-    line-height: 40px;
-  }
-  .personal {
-    width: 95%;
-    margin: 72px auto 0px auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-  }
-  .pic {
-    width: 210px;
-    height: 180px;
-    background-image: url("../img/pro-03.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .information {
-    width: 55%;
-    position: absolute;
-    left: 185px;
-    top: 6px;
-  }
-  .infor_span {
-    font-family: "微軟正黑體";
-    font-size: 1.2em;
-    color: #4d4d4d;
-  }
-  .infor_sub {
-    position: absolute;
-    margin-top: 24px;
-    left: -10px;
-  }
-  .experience {
-    width: 95%;
-    margin: 72px auto 0px auto;
-  }
-  .experience h3 {
-    font-family: "微軟正黑體";
-    font-size: 1.5em;
-    color: #4d4d4d;
-  }
-  .experience li {
-    position: relative;
-    list-style-image: url("../img/point.1-02.png");
-  }
-  .experience li:after {
-    content: '';
-    background-color: #222;
-    position: absolute;
-    width: 3px;
-    height: 65px;
-    top: -12px;
-    left: -14px;
-    z-index: -1;
-  }
-  .exp_box {
-    clear: both;
-    width: 90%;
-    float: right;
-  }
-  .exp_infor {
-    margin-top: 24px;
-  }
-  .introduction {
-    position: relative;
-    clear: both;
-    width: 95%;
-    height: 500px;
-    margin: auto;
-  }
-  .intro_text {
-    position: absolute;
-    top: 72px;
-    font-size: 1.2em;
-  }
-  .skills {
-    width: 95%;
-    margin: 72px auto 0px auto;
-  }
-  .skills_top {
-    width: 100%;
-    height: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .skills_but {
-    width: 100%;
-    height: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .skills_box {
-    width: clac(100%/4);
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .skills_1 {
-    width: 100%;
-    background-image: url("../img/ps-03.png");
-  }
-  .skills_2 {
-    width: 100%;
-    background-image: url("../img/ai-03.png");
-  }
-  .skills_3 {
-    width: 100%;
-    background-image: url("../img/scsslogo.png");
-  }
-  .skills_4 {
-    width: 100%;
-  }
-  .skills_5 {
-    width: 100%;
-    background-image: url("../img/jquery.png");
-  }
-  .skills_6 {
-    width: 100%;
-    background-image: url("../img/html-03.png");
-  }
-  .skills_7 {
-    width: 100%;
-    background-image: url("../img/css-03.png");
-  }
-  .skills_8 {
-    width: 100%;
-    background-image: url("../img/js-03.png");
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  body {
-    width: 100%;
-    height: 100%;
-  }
-  .container {
-    width: 100%;
-    height: 100vh;
-    background-image: url("../img/bgc.JPG");
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .container li {
-    list-style: none;
-  }
-  .container:after {
+  .container .menubar .menucanten .menu:before {
     content: "";
-    width: 100%;
-    height: 200%;
-    position: absolute;
-    background-color: #ff7bac;
-    top: 100%;
-    left: 0;
-    z-index: -2;
-    -webkit-clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
-            clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
-  }
-  .container h1 {
-    font-size: 5em;
-    color: #999999;
-    text-align: center;
-    line-height: 450px;
-  }
-  .menubar {
-    width: 100%;
-    height: 60px;
-    padding: 10px;
-    background-color: #f2f2f220;
-    -webkit-box-shadow: 1px 1px 2px #222;
-            box-shadow: 1px 1px 2px #222;
-  }
-  .menucanten {
-    width: 40px;
-    height: 100%;
-    position: relative;
-    float: right;
-  }
-  .menu {
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-  }
-  .menu:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background-color: #666;
-    top: 8px;
-    border-radius: 2px;
-  }
-  .menu:before {
-    content: '';
     position: absolute;
     width: 100%;
     height: 4px;
@@ -342,33 +326,13 @@ p {
     bottom: 8px;
     border-radius: 2px;
   }
-  .menu.menuani {
+  .container .menubar .menucanten .menu.menuani {
     -webkit-animation: menuani 1s;
             animation: menuani 1s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
   }
-  @-webkit-keyframes menuani {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-    }
-  }
-  @keyframes menuani {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-    }
-  }
-  .menubox {
+  .container .menubar .menubox {
     width: 180px;
     height: 180px;
     position: absolute;
@@ -381,13 +345,25 @@ p {
     top: 53px;
     z-index: 999;
   }
-  .menulist {
+  .container .menubar .menubox .menulist {
     height: calc(100% / 4);
     display: block;
     text-align: center;
     font-size: 1.5em;
     font-weight: 700;
     line-height: 40px;
+  }
+  .bgccolor {
+    content: "";
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    background-color: #ff7bac;
+    top: 100%;
+    left: 0;
+    z-index: -999;
+    -webkit-clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+            clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
   }
   .personal {
     width: 95%;
@@ -396,8 +372,9 @@ p {
     display: -ms-flexbox;
     display: flex;
     position: relative;
+    top: 100px;
   }
-  .pic {
+  .personal .pic {
     width: 210px;
     height: 180px;
     background-image: url("../img/pro-03.png");
@@ -405,21 +382,35 @@ p {
     background-size: cover;
     background-position: center;
   }
-  .information {
-    width: 55%;
+  .personal .information {
     position: absolute;
-    left: 185px;
-    top: 6px;
+    left: 170px;
+    top: 18px;
   }
-  .infor_span {
+  .personal .information .infor_top span {
+    font-family: "微軟正黑體";
+    font-size: 1em;
+    color: #4d4d4d;
+  }
+  .personal .information .infor_top p {
+    font-family: "微軟正黑體";
+    font-size: 0.8em;
+    color: #4d4d4d;
+  }
+  .personal .information .infor_sub {
+    position: absolute;
+    margin-top: 24px;
+    left: -25px;
+  }
+  .personal .information .infor_sub span {
     font-family: "微軟正黑體";
     font-size: 1.2em;
     color: #4d4d4d;
   }
-  .infor_sub {
-    position: absolute;
-    margin-top: 24px;
-    left: -10px;
+  .personal .information .infor_sub p {
+    font-family: "微軟正黑體";
+    font-size: 0.8em;
+    color: #4d4d4d;
   }
   .experience {
     width: 95%;
@@ -434,48 +425,50 @@ p {
     position: relative;
     list-style-image: url("../img/point.1-02.png");
   }
-  .experience li:after {
-    content: '';
-    background-color: #222;
-    position: absolute;
-    width: 3px;
-    height: 65px;
-    top: -12px;
-    left: -14px;
-    z-index: -1;
-  }
-  .exp_box {
+  .experience .exp_box {
+    position: relative;
     clear: both;
     width: 90%;
     float: right;
   }
-  .exp_infor {
+  .experience .exp_box:after {
+    content: "";
+    background-color: #333;
+    position: absolute;
+    width: 3px;
+    height: 250px;
+    top: 18px;
+    left: -13px;
+    z-index: -1;
+  }
+  .experience .exp_box .exp_infor {
     margin-top: 24px;
   }
   .introduction {
     position: relative;
     clear: both;
     width: 95%;
-    height: 500px;
+    height: 535px;
     margin: auto;
   }
-  .intro_text {
+  .introduction .intro_text {
     position: absolute;
     top: 72px;
+    font-family: "微軟正黑體";
     font-size: 1.2em;
   }
   .skills {
     width: 95%;
     margin: 72px auto 0px auto;
   }
-  .skills_top {
+  .skills .skills_top {
     width: 100%;
     height: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .skills_but {
+  .skills .skills_but {
     width: 100%;
     height: 100px;
     display: -webkit-box;
@@ -520,5 +513,41 @@ p {
     width: 100%;
     background-image: url("../img/js-03.png");
   }
+  @-webkit-keyframes menuani {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+    }
+  }
+  @keyframes menuani {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+    }
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #999999;
+}
+
+li {
+  font-family: "微軟正黑體";
 }
 /*# sourceMappingURL=index.css.map */

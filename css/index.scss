@@ -1,6 +1,6 @@
-@import 'variable.scss';
-@import 'computer.scss';
-@import 'moilbe.scss';
+@import 'variable';
+@import 'computer';
+@import 'moilbe';
 
 * {
   box-sizing: border-box;
@@ -14,11 +14,6 @@ a{
 }
 li {
   font-family: $fonttype;
-}
-p {
-  font-family: $fonttype;
-  font-size: $fontsize10;
-  color: $fontpcolor;
 }
 
 
