@@ -33,7 +33,7 @@ $(document).ready(function () {
     $(window).resize(function(){
         var Docheight = $(document).height()
         var box1height = $('#box1').height()
-        $('.bgccolor').height(Docheight-box1height)
+        $('.bgccolor').innerHeight(Docheight-box1height)
     })
 
 })
