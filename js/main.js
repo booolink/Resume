@@ -21,7 +21,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var srco = $(this).scrollTop()
         function Top0() {
-            $('.personal').animate({ 'top': '0px' }, 2000);
+            $('#box3').animate({ 'top': '0px' }, 2000);
         }
         if (srco >= 300) {
             Top0();
