@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   body {
     width: 100%;
     height: 100%;
@@ -81,7 +81,7 @@
     height: calc(100% / 4);
     display: block;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 700;
     line-height: 40px;
   }
@@ -98,8 +98,8 @@
             clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
   }
   .personal {
-    width: 95%;
-    margin: 72px auto 0px auto;
+    width: 75%;
+    margin: 72px  auto  0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -107,8 +107,8 @@
     top: 100px;
   }
   .personal .pic {
-    width: 210px;
-    height: 180px;
+    width: 315px;
+    height: 270px;
     background-image: url("../img/pro-03.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,17 +116,21 @@
   }
   .personal .information {
     position: absolute;
-    left: 170px;
-    top: 18px;
+    left: 390px;
+    top: 27px;
+  }
+  .personal .information .infor_top {
+    width: 250px;
+    display: inline-block;
   }
   .personal .information .infor_top span {
     font-family: "微軟正黑體";
-    font-size: 1em;
+    font-size: 1.2em;
     color: #4d4d4d;
   }
   .personal .information .infor_top p {
     font-family: "微軟正黑體";
-    font-size: 0.8em;
+    font-size: 1em;
     color: #4d4d4d;
   }
   .personal .information .infor_sub {
@@ -141,16 +145,16 @@
   }
   .personal .information .infor_sub p {
     font-family: "微軟正黑體";
-    font-size: 0.8em;
+    font-size: 1em;
     color: #4d4d4d;
   }
   .experience {
-    width: 95%;
-    margin: 72px auto 0px auto;
+    width: 65%;
+    margin: 72px auto 0px;
   }
   .experience h3 {
     font-family: "微軟正黑體";
-    font-size: 1.5em;
+    font-size: 1.6em;
     color: #4d4d4d;
   }
   .experience li {
@@ -162,36 +166,41 @@
     clear: both;
     width: 90%;
     float: right;
+    margin: auto;
+    text-indent: -5px;
   }
   .experience .exp_box:after {
     content: "";
     background-color: #333;
     position: absolute;
     width: 3px;
-    height: 250px;
+    height: 300px;
     top: 18px;
     left: -13px;
     z-index: -1;
   }
   .experience .exp_box .exp_infor {
+    font-family: "微軟正黑體";
+    font-size: 1.2em;
     margin-top: 24px;
+    padding-left: 30px;
   }
   .introduction {
     position: relative;
     clear: both;
-    width: 95%;
+    width: 75%;
     height: 535px;
     margin: auto;
   }
   .introduction .intro_text {
     position: absolute;
-    top: 72px;
+    top: 90px;
     font-family: "微軟正黑體";
     font-size: 1.2em;
   }
   .skills {
     width: 95%;
-    margin: 72px auto 0px auto;
+    margin: 90px auto 0px auto;
   }
   .skills .skills_top {
     width: 100%;
@@ -349,7 +358,7 @@
     height: calc(100% / 4);
     display: block;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 700;
     line-height: 40px;
   }
@@ -418,7 +427,7 @@
   }
   .experience h3 {
     font-family: "微軟正黑體";
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: #4d4d4d;
   }
   .experience li {
