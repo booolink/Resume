@@ -32,7 +32,7 @@ $(document).ready(function () {
    $(window).resize(function(){
 
         var Docwidth = $(window).width()
-        var Docheight = ($(document).height() + 60)
+        var Docheight = $(document).height()
         var box1height = $('#box1').height()
 
 

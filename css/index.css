@@ -87,7 +87,7 @@
   }
   .bgccolor {
     width: 100%;
-    height: 10px;
+    height: 100%;
     position: absolute;
     background-color: #ff7bac;
     top: 100%;
