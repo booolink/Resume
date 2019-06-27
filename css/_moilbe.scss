@@ -1,8 +1,267 @@
 
+
+@media screen and (max-width: 812px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/bgc.JPG");
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    & li {
+      list-style: none;
+    }
+    
+    & h1 {
+      font-size: 5em;
+      color: #999999;
+      text-align: center;
+      line-height: 450px;
+    }
+    & .menubar {
+      width: 100%;
+      height: 60px;
+      padding: 10px 15px;
+      background-color: $menubarcolor;
+      box-shadow: 1px 1px 2px #222;
+      & .menucanten {
+        width: 45px;
+        height: 100%;
+        position: relative;
+        float: right;
+        & .menu {
+          width: 100%;
+          height: 100%;
+          z-index: 999;
+          &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: #666;
+            top: 8px;
+            border-radius: 2px;
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: #666;
+            bottom: 8px;
+            border-radius: 2px;
+          }
+          &.menuani {
+            animation: menuani 1s;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+      & .menubox {
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        display: none;
+        background-color: $menuboxcolor;
+        box-shadow: 1px 1px 2px #222;
+        border-radius: 3px;
+        right: 0;
+        top: 53px;
+        z-index: 999;
+        & .menulist {
+          height: calc(100% / 4);
+          display: block;
+          text-align: center;
+          font-size: $fontsize20;
+          font-weight: 700;
+          line-height: 40px;
+        }
+      }
+    }
+
+  }
+  .bgccolor {
+    width: 100%;
+    height: 300%;
+    position: absolute;
+    background-color: $bgccolor;
+    top: 100%;
+    left: 0;
+    z-index: -999;
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+  }
+  .personal {
+    width: 55%;
+    margin: 72px auto 0px auto;
+    display: flex;
+    position: relative;
+
+    & .pic {
+      width: 210px;
+      height: 180px;
+      background-image: url("../img/pro-03.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    & .information {
+      position: absolute;
+      left: 105px;
+
+      & .infor_top{
+        width: 200px;
+        & span{
+          font-family: $fonttype;
+          font-size: $fontsize12;
+          color: $fontpcolor;
+        }
+        & p{
+          font-family: $fonttype;
+          font-size: $fontsize10;
+          color: $fontpcolor;
+        }
+      }
+      & .infor_sub {
+        position: absolute;
+        margin-top: 24px;
+        left: 36px;
+        & span{
+          font-family: $fonttype;
+          font-size: $fontsize14;
+          color: $fontpcolor;
+        }
+        & p{
+          font-family: $fonttype;
+          font-size: $fontsize10;
+          color: $fontpcolor;
+        }
+      }
+    }
+  }
+
+  .experience {
+    width: 55%;
+    margin: 72px auto 0px auto;
+
+    & h3 {
+      font-family: $fonttype;
+      font-size: $fontsize20;
+      color: $fontpcolor;
+    }
+    & li {
+      position: relative;
+      list-style-image: url("../img/point.1-02.png");
+    }
+    & .exp_box {
+      position: relative;
+      clear: both;
+      width: 90%;
+      float: right;
+      font-size: $fontsize10;
+
+      & .exp_infor {
+        margin-top: 24px;
+        padding-left: 20px;
+      }
+
+      &:after {
+        content: "";
+        background-color: #333;
+        position: absolute;
+        width: 3px;
+        height: 250px;
+        top: 18px;
+        left:-13px;
+        z-index: -1;
+      }
+    }
+  }
+
+  .introduction {
+    position: relative;
+    clear: both;
+    width: 95%;
+    height: 500px;
+    margin: auto;
+
+    & .intro_text {
+      position: absolute;
+      top: 0px;
+      font-family: $fonttype;
+      font-size: $fontsize14;
+    }
+  }
+
+  .skills {
+    width: 95%;
+    margin: 72px auto 0px auto;
+    & .skills_top {
+      width: 100%;
+      height: 100px;
+      display: flex;
+    }
+    & .skills_but {
+      width: 100%;
+      height: 100px;
+      display: flex;
+    }
+  }
+  .skills_box {
+    width: clac(100% / 4);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .skills_1 {
+    width: 100%;
+    background-image: url("../img/ps-03.png");
+  }
+  .skills_2 {
+    width: 100%;
+    background-image: url("../img/ai-03.png");
+  }
+  .skills_3 {
+    width: 100%;
+    background-image: url("../img/scsslogo.png");
+  }
+  .skills_4 {
+    width: 100%;
+  }
+  .skills_5 {
+    width: 100%;
+    background-image: url("../img/jquery.png");
+  }
+  .skills_6 {
+    width: 100%;
+    background-image: url("../img/html-03.png");
+  }
+  .skills_7 {
+    width: 100%;
+    background-image: url("../img/css-03.png");
+  }
+  .skills_8 {
+    width: 100%;
+    background-image: url("../img/js-03.png");
+  }
+
+  @keyframes menuani {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-90deg);
+    }
+  }
+
+}
 @media screen and (max-width: 415px) {
   body {
     width: 100%;
-    min-width: 414px;
     height: 100%;
   }
   .container {
@@ -260,11 +519,9 @@
   }
 
 }
-
 @media screen and (max-width: 376px) {
   body {
     width: 100%;
-    min-width: 360px;
     height: 100%;
   }
   .container {
