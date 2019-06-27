@@ -27,25 +27,25 @@ $(document).ready(function () {
     //         Top0();
     //     }
     // })
-    
-    
-   $(window).resize(function(){
+
+
+    $(window).resize(function () {
 
         var Docwidth = $(window).width()
         var Docheight = $(document).height()
         var box1height = $('#box1').height()
 
-
-
-        $('.bgccolor').innerHeight(Docheight-box1height)
+        $('.bgccolor').innerHeight(Docheight - box1height)
         $('.bgccolor').width(Docwidth)
-        console.log(Docwidth)
-
-
-   })
-   
-    
+        console.log($('.bgccolor').height(Docheight - box1height))
+    })
 })
+
+
+
+
+
+
 
 
 
