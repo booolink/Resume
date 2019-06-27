@@ -36,7 +36,7 @@ $(document).ready(function () {
         var box1height = $('#box1').height()
         var box1width = $('#box1').width()
         $('.bgccolor').innerHeight(Docheight-box1height)
-        $('.bgccolor').innerWidth(Docwidth)
+        $('.bgccolor').innerWidth(box1width)
     }
     totalHeight();
 })
