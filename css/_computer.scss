@@ -86,7 +86,6 @@
 
   }
   .bgccolor {
-    content:"";
     width: 100%;
     height: 10px;
     position: absolute;
@@ -149,7 +148,7 @@
     height: 500px;
     margin: 72px auto 0px;
     position: relative;
-    top:  100px;
+    // top:  100px;
     & h3 {
       font-family: $fonttype;
       font-size: $fontsize22;

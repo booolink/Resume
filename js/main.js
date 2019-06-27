@@ -18,22 +18,25 @@ $(document).ready(function () {
         $('.menu').toggleClass('menuani')
     })
 
-    $(window).scroll(function () {
-        var srco = $(this).scrollTop()
-        function Top0() {
-            $('#box3').animate({ 'top': '0px' }, 2000);
-        }
-        if (srco >= 300) {
-            Top0();
-        }
-    })
+    // $(window).scroll(function () {
+    //     var srco = $(this).scrollTop()
+    //     function Top0() {
+    //         $('#box3').animate({ 'top': '0px' }, 2000);
+    //     }
+    //     if (srco >= 300) {
+    //         Top0();
+    //     }
+    // })
     
     
 
     function totalHeight(){
+        var Docwidth = $(document).width()
         var Docheight = $(document).height()
         var box1height = $('#box1').height()
+        var box1width = $('#box1').width()
         $('.bgccolor').innerHeight(Docheight-box1height)
+        $('.bgccolor').innerWidth(Docwidth)
     }
     totalHeight();
 })
