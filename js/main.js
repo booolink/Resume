@@ -29,16 +29,22 @@ $(document).ready(function () {
     // })
     
     
+   $(window).resize(function(){
 
-    function totalHeight(){
-        var Docwidth = $(document).width()
-        var Docheight = $(document).height()
+        var Docwidth = $(window).width()
+        var Docheight = ($(document).height() + 60)
         var box1height = $('#box1').height()
-        var box1width = $('#box1').width()
+
+
+
         $('.bgccolor').innerHeight(Docheight-box1height)
-        $('.bgccolor').innerWidth(box1width)
-    }
-    totalHeight();
+        $('.bgccolor').width(Docwidth)
+        console.log(Docwidth)
+
+
+   })
+   
+    
 })
 
 
