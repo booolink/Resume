@@ -28,18 +28,19 @@ $(document).ready(function () {
     //     }
     // })
 
+   
+        $(window).resize(function () {
 
-    $(window).resize(function () {
+            var Docwidth = $('#box1').width()
 
-        var Docwidth = $(window).width()
+            var Docheight = $(document).height()
+            var box1height = $('#box1').height()
 
-        var Docheight = $(document).height()
-        var box1height = $('#box1').height()
-
-        $('.bgccolor').height(Docheight - box1height)
-        $('.bgccolor').width(Docwidth)
-
-    })
+            $('.bgccolor').height(Docheight - box1height)
+            $('.bgccolor').width(Docwidth)
+           
+        })
+  
 })
 
 
