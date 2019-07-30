@@ -1,6 +1,4 @@
-@import 'variable';
-@import 'computer';
-@import 'moilbe';
+@import "variable";
 
 * {
   box-sizing: border-box;
@@ -8,12 +6,290 @@
   margin: 0;
   padding: 0;
 }
-a{
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+a {
   text-decoration: none;
   color: #999999;
 }
 li {
   font-family: $fonttype;
 }
+.main {
+  margin: auto;
+}
 
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/bgc.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  & li {
+    list-style: none;
+  }
 
+  & h1 {
+    font-size: 5em;
+    color: #999999;
+    text-align: center;
+    line-height: 450px;
+  }
+  & .menubar {
+    width: 100%;
+    height: 60px;
+    padding: 10px 15px;
+    background-color: $menubarcolor;
+    box-shadow: 1px 1px 2px #222;
+    & .menucanten {
+      width: 45px;
+      height: 100%;
+      position: relative;
+      float: right;
+      & .menu {
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          background-color: #666;
+          top: 8px;
+          border-radius: 2px;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          background-color: #666;
+          bottom: 8px;
+          border-radius: 2px;
+        }
+        &.menuani {
+          animation: menuani 1s;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+    & .menubox {
+      width: 180px;
+      height: 180px;
+      position: absolute;
+      display: none;
+      background-color: $menuboxcolor;
+      box-shadow: 1px 1px 2px #222;
+      border-radius: 3px;
+      right: 0;
+      top: 53px;
+      z-index: 999;
+      & .menulist {
+        height: calc(100% / 4);
+        display: block;
+        text-align: center;
+        font-size: $fontsize20;
+        font-weight: 700;
+        line-height: 40px;
+      }
+    }
+  }
+}
+.bgccolor {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top:100px;
+  &:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: $bgccolor;
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+    z-index: -999;
+    top: 0;
+  }
+}
+.personal {
+  min-width: 590px;
+  width: 60%;
+  margin: 0px auto 100px;
+  display: flex;
+  position: relative;
+  line-height: 2em;
+  font-size: $fontsize12;
+  & .pic {
+    width: 300px;
+    height: 250px;
+    background: url("../img/pro-03.png") center center no-repeat;
+    background-size: cover;
+  }
+  & .information {
+    width: calc(100% - 300px);
+    & .infor_top {
+      & span {
+        font-family: $fonttype;
+        font-size: $fontsize14;
+        font-style: oblique;
+        font-weight: 700;
+        color: $fontpcolor;
+      }
+      > p {
+        word-spacing: 15px;
+        font-family: $fonttype;
+        font-size: $fontsize12;
+        font-weight: 500;
+        color: $fontpcolor;
+      }
+    }
+    & .infor_sub {
+      width: 100%;
+      margin: 20px;
+      & span {
+        padding-left: 30px;
+        display: block;
+        width: 200px;
+        font-style: oblique;
+        font-weight: 700;
+        font-family: $fonttype;
+        font-size: $fontsize14;
+        color: $fontpcolor;
+        background-color: #af474793;
+        clip-path: polygon(10% 0%, 100% 0%, 91% 100%, 0% 100%);
+      }
+      > p {
+        word-spacing: 10px;
+        font-family: $fonttype;
+        font-size: $fontsize12;
+        font-weight: 500;
+        color: $fontpcolor;
+      }
+    }
+  }
+}
+
+.experience {
+  width: 100%;
+  margin: 100px auto 0px ;
+
+  & li {
+    position: relative;
+    list-style-image: url("../img/point.1-02.png");
+  }
+  & h3 {
+    font-family: $fonttype;
+    font-size: $fontsize20;
+    color: $fontpcolor;
+  }
+  > .Exp {
+    min-width: 380px;
+    width: 40%;
+    margin: auto;
+    & .exp_box {
+      position: relative;
+      width: 80%;
+      margin: auto;
+      &:after {
+        content: "";
+        background-color: #333;
+        position: absolute;
+        width: 3px;
+        height: 250px;
+        top: 18px;
+        left: -13px;
+        z-index: -1;
+      }
+      & .exp_infor {
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+.introduction {
+  position: relative;
+  width: 95%;
+  margin: 100px auto 0px;
+
+  & .intro_text {
+    width: 60%;
+    margin:  auto ;
+    font-family: $fonttype;
+    font-size: $fontsize14;
+  }
+}
+
+.skills {
+  width: 60%;
+  margin: 72px auto 0px auto;
+  & .skills_top {
+    width: 100%;
+    height: 100px;
+    display: flex;
+  }
+  & .skills_but {
+    width: 100%;
+    height: 100px;
+    display: flex;
+  }
+  .skills_box {
+    width: clac(100% / 4);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  & .skills_1 {
+    width: 100%;
+    background-image: url("../img/ps-03.png");
+  }
+  & .skills_2 {
+    width: 100%;
+    background-image: url("../img/ai-03.png");
+  }
+  & .skills_3 {
+    width: 100%;
+    background-image: url("../img/scsslogo.png");
+  }
+  & .skills_4 {
+    width: 100%;
+  }
+  & .skills_5 {
+    width: 100%;
+    background-image: url("../img/jquery.png");
+  }
+  & .skills_6 {
+    width: 100%;
+    background-image: url("../img/html-03.png");
+  }
+  & .skills_7 {
+    width: 100%;
+    background-image: url("../img/css-03.png");
+  }
+  & .skills_8 {
+    width: 100%;
+    background-image: url("../img/js-03.png");
+  }
+}
+@keyframes menuani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .personal{
+    transform: scale(0.7) translate(-22%)
+  }
+  .information{
+    transform: translate(-18%)
+  }
+}
